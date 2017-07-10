@@ -17,7 +17,7 @@ export default class Input extends React.Component {
         .then((response)=>{return response.json()})
         // once info is given, we want to update our parents state
         // we want to share this data with another component, via our parent state
-        .then((data)=>console.log('data',data))
+        .then((data)=>this.props.updateJokes(data.value))
     }
 
     render() {

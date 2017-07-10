@@ -2,10 +2,13 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 // the ./ means same folder structure level
 import Input from './Component/Input/Input';
+import Tinder from './Component/Tinder/Tinder';
 export default class App extends React.Component {
 
   state={
-    value:''
+    value:'',
+    // array
+    jokes:[],
   }
 
 // props are a channel to pass info from an instance to a class
@@ -13,12 +16,11 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Input
+          updateJokes={(jokes)=>this.setState({jokes:jokes})}
           value={this.state.value}
           onChange={(value)=>this.setState({value:value})}
         />
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        
       </View>
     );
   }
