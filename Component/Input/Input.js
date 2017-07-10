@@ -8,6 +8,16 @@ export default class Input extends React.Component {
 
     fetchData(){
         console.log('this is the value',this.props.value);
+        // string concatination is combining two strings
+        // concatinate a static string with a dynamic value
+        fetch('http://api.icndb.com/jokes/random/${this.props.value}')
+        // json-javascript object notation, get data and make it to a type the computer understands
+        // make it into a type of object, key value pairs
+        // {flower:'part of a plant'}=> this is an object
+        .then((response)=>{return response.json()})
+        // once info is given, we want to update our parents state
+        // we want to share this data with another component, via our parent state
+        .then((data)=>console.log('data',data))
     }
 
     render() {
@@ -54,7 +64,7 @@ const styles=StyleSheet.create({
         borderWidth:2,
     },
     button:{
-        backgroundColor:'blue',
+        backgroundColor:'red',
         height:40,
         width:100,
         borderColor:'gray',
