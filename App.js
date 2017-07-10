@@ -4,12 +4,17 @@ import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 import Input from './Component/Input/Input';
 export default class App extends React.Component {
 
+  state={
+    value:''
+  }
+
 // props are a channel to pass info from an instance to a class
   render() {
     return (
       <View style={styles.container}>
         <Input
-          value={'apples'}
+          value={this.state.value}
+          onChange={(value)=>this.setState({value:value})}
         />
         <Text>Open up App.js to start working on your app!</Text>
         <Text>Changes you make will automatically reload.</Text>
