@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 
+import Input from './Component/Input/Input';
 export default class App extends React.Component {
 
 

@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, TextInput, TouchableHighlight } from 'react-nat
 
 // () => someFunction()
 //
-export default class Input extends React.components {
+export default class Input extends React.Component {
 
     render() {
         // return data, i.e. result of executing function
