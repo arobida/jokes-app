@@ -1,24 +1,24 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 // the ./ means same folder structure level
-import Input from './Component/Input/Input';
-import Tinder from './Component/Tinder/Tinder';
+import Input from './Components/Input/Input';
+import Tinder from './Components/Tinder/Tinder';
 export default class App extends React.Component {
 
-  state={
-    value:'',
+  state = {
+    value: '',
     // array
-    jokes:[],
+    jokes: [],
   }
 
-// props are a channel to pass info from an instance to a class
+// props are a channel to pass info from an instance to the class
   render() {
     return (
       <View style={styles.container}>
         <Input
-          updateJokes={(jokes)=>this.setState({jokes:jokes})}
+          updateJokes={(jokes) => this.setState({ jokes: jokes })}
           value={this.state.value}
-          onChange={(value)=>this.setState({value:value})}
+          onChange={(value) => this.setState({ value: value })}
         />
         <Tinder
           jokes={this.state.jokes}
@@ -36,8 +36,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   button: {
-    width:100,
-    height:50
-  },
-  
+    width: 100,
+    height: 50
+  }
 });
