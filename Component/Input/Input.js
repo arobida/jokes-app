@@ -14,6 +14,7 @@ export default class Input extends React.Component {
             <View  style={styles.container}>
                 <TextInput 
                 keyboardType={'numeric'}
+                // apples
                 value={this.props.value}
                 style={styles.input}
                 // track changes in text, when someone types something input field
