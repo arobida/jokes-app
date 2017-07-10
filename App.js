@@ -20,7 +20,9 @@ export default class App extends React.Component {
           value={this.state.value}
           onChange={(value)=>this.setState({value:value})}
         />
-        
+        <Tinder
+          jokes={this.state.jokes}
+        />
       </View>
     );
   }
@@ -36,5 +38,6 @@ const styles = StyleSheet.create({
   button: {
     width:100,
     height:50
-  }
+  },
+  
 });
